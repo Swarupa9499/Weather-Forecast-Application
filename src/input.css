@@ -97,7 +97,6 @@ hr {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 12px;
-    margin: 10px;
 
     & .weather-left {
         grid-column: span 1;
@@ -225,3 +224,28 @@ hr {
         }
     }
 }
+
+/* media query */
+
+@media (max-width: 1100px){
+    .weather-data{
+        grid-template-columns: repeat (3, 1fr);
+        & .weather-right{
+            grid-column: span 2;
+            & .highlights{
+                grid-template-columns: repeat(3, 1fr);
+                & .card:nth-of-type(1){
+                     grid-column: span;
+                    }
+                }
+                & .hourly-forecast{
+                    grid-template-columns: repeat(6,1fr);
+                }
+            }
+        }
+    } 
+    
+    
+    
+    
+    
