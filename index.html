@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather Dashboard</title>
-  <link href="src/output.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link href="src/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
     <!--------------------- header start---------------------->
     <header class="bg-blue-500 p-4">
@@ -15,16 +17,86 @@
                 Weather App
             </div>
             <div class="flex space-x-2">
-                <input type="text" id="cityName" placeholder="Enter city name"  class="px-2 py-1 rounded-md focus:outline-none focus:ring focus:border-blue-300">
-                <button id="searchBtn" class="bg-white  text-blue-500 px-4 py-1 rounded-md hover:bg-gray-100 focus:outline-none focus:ring focus:border-blue-300">
-                    Search
+                <input type="text" id="city_input" placeholder="Enter city name"
+                    class="px-2 py-1 rounded-md focus:outline-none focus:ring focus:border-blue-300">
+                <button id="searchBtn"
+                    class="bg-white  text-blue-500 px-4 py-1 rounded-md hover:bg-gray-100 focus:outline-none focus:ring focus:border-blue-300">
+                    <i class="fas fa-search"></i> Search
                 </button>
-                <button id="locationBtn" class="bg-white text-blue-500 px-4 py-1 rounded-md hover:bg-gray-100 focus:outline-none focus:ring focus:border-blue-300">
+                <button id="locationBtn"
+                    class="bg-white text-blue-500 px-4 py-1 rounded-md hover:bg-gray-100 focus:outline-none focus:ring focus:border-blue-300">
                     <i class="fas fa-location-arrow"></i> Current Location
                 </button>
             </div>
         </div>
-    </header>
-
+    </header><!------------- header end---------------------->
+    <!--------------------- left navigation start---------------------->
+    <div class="weather-data">
+        <div class="weather-left">
+            <div class="card">
+                <div class="current-weather">
+                    <div class="details">
+                        <p>Now</p>
+                        <h2>___&deg; C</h2>
+                        <p></р>
+                    </div>
+                    <div class="weather-icon">
+                        <img src="https://openweathermap.org/img/wn/04d@2x.png" alt="">
+                    </div>
+                </div>
+                <hr>
+                <div class="card-footer">
+                    <p><i class="fa fa-calendar"></i>______</p>
+                    <p><i class="fa fa-location-dot"></i>______</p>
+                </div>
+                <div class="card">
+                    <h2>5 Days Forecast</h2>
+                    <div class="day-forecast">
+                        <div class="forecast-item">
+                            <div class="icon-wrapper">
+                                <img src="https://openweathermap.org/img/wn/02d.png" alt="">
+                                <span>____&deg;C</span>
+                            </div>
+                            <p>____</p>
+                            <p>____</p>
+                        </div>
+                        <div class="forecast-item">
+                            <div class="icon-wrapper">
+                                <img src="https://openweathermap.org/img/wn/02d.png" alt="">
+                                <span>____&deg;C</span>
+                            </div>
+                            <p>____</p>
+                            <p>____</p>
+                        </div>
+                        <div class="forecast-item">
+                            <div class="icon-wrapper">
+                                <img src="https://openweathermap.org/img/wn/02d.png" alt="">
+                                <span>____&deg;C</span>
+                            </div>
+                            <p>____</p>
+                            <p>____</p>
+                        </div>
+                        <div class="forecast-item">
+                            <div class="icon-wrapper">
+                                <img src="https://openweathermap.org/img/wn/02d.png" alt="">
+                                <span>____&deg;C</span>
+                            </div>
+                            <p>____</p>
+                            <p>____</p>
+                        </div>
+                        <div class="forecast-item">
+                            <div class="icon-wrapper">
+                                <img src="https://openweathermap.org/img/wn/02d.png" alt="">
+                                <span>____&deg;C</span>
+                            </div>
+                            <p>____</p>
+                            <p>____</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
