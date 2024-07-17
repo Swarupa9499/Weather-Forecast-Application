@@ -663,6 +663,10 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 :root {
   --bg-color1: #212529;
   --bg-color2: #2a2b2d;
@@ -705,7 +709,7 @@ hr {
     font-weight: 600;
   }
   & #city_input {
-    background-color: var (--bg-color 2);
+    background-color: var(--bg-color2);
     border: none;
     padding: 12px;
     font-size: 16px;
