@@ -1,9 +1,18 @@
 let cityInput = document.getElementById("city_input"),
   searchBtn = document.getElementById("searchBtn"),
-  api_key = "83a7cc46cc6196175a5e90e8808dbdf4";
-  currentWeatherCard=document.querySelectorAll('.weather-left .card')[0];
+  locationBtn = document.getElementById("locationBtn"),
+  api_key = "your_api_key";
+  currentWeatherCard=document.querySelectorAll('.weather-left .card')[0],
+  fiveDaysForecastCard=document.querySelector('.day-forecast'),
+  aqiCard= document.querySelectorAll('.highlights .card')[0],
+  sunriseCard= document.querySelectorAll('.highlights .card')[1],
+  humidityVal=document.getElementById('humidityVal'),
+  pressureval=document.getElementById('pressureval'),
+   visibilityVal=document.getElementById('visibilityVal'),windSpeedVal=document.getElementById('windSpeedVal'),feelsVal=document.getElementById('feelsVal'),
+   hourlyForecastCard=document.querySelector('.hourly-forecast'),
+   aqiList=['Good','Fair','Moderate','Poor','Very Poor'];
 
-let fiveDaysForecastCard=document.querySelector('.day-forecast');
+
 
 function getWeatherDetails(name,lat,lon,country,state){
     let FORECAST_API_URL=`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${api_key}`,
