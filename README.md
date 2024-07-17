@@ -25,7 +25,7 @@ Develop a weather forecast application using JavaScript, HTML, and Tailwind CSS.
 ### Installation
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/yourusername/weather-forecast-app.git
+    git clone https://github.com/Swarupa9499/Weather-Forecast-Application.git
     cd weather-forecast-app
     ```
 
