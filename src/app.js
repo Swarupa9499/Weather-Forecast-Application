@@ -13,7 +13,7 @@ let cityInput = document.getElementById("city_input"),
    aqiList=['Good','Fair','Moderate','Poor','Very Poor'];
 
 
-
+// Function to fetch and display weather details
 function getWeatherDetails(name,lat,lon,country,state){
     let FORECAST_API_URL=`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${api_key}`,
     WEATHER_API_URL=`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${api_key}`,
@@ -41,7 +41,7 @@ function getWeatherDetails(name,lat,lon,country,state){
         'Nov',
         'Dec'
     ];
-
+     // Fetch air quality data
     fetch(AIR_POLLUTION_API_URL).then(res=>res.json()).then(data=>{
         let {co, no, no2, o3, so2, pm2_5, pm10, nh3} = data.list[0].components;
        aqiCard.innerHTML=`
@@ -88,7 +88,7 @@ function getWeatherDetails(name,lat,lon,country,state){
     }).catch(()=>{
         alert("failed to fetch Air Quality Data");
     });
-
+     // Fetch current weather data
     fetch(WEATHER_API_URL).then(res=>res.json()).then(data=>{
         let date= new Date();
         currentWeatherCard.innerHTML=`
@@ -150,7 +150,7 @@ function getWeatherDetails(name,lat,lon,country,state){
         alert(`Failed to fecth current weather`);
         console.error(error);
     });
-
+ // Fetch 5-day forecast data
     fetch(FORECAST_API_URL).then(res => res.json()).then(data=>{
         let hourlyForecast = data.list;
         hourlyForecastCard. innerHTML = '';
@@ -197,7 +197,7 @@ function getWeatherDetails(name,lat,lon,country,state){
         alert(`Failed to fetch weather forecast`);
     });
 }
-
+// Function to get city coordinates and call getWeatherDetail
 function getCityCoordinates() {
   let cityName = cityInput.value.trim();
   cityInput.value = " ";
@@ -214,7 +214,7 @@ function getCityCoordinates() {
     });
 }
 
-
+// Function to get user coordinates and call getWeatherDetails
 function getUserCoordinates(){
     navigator.geolocation.getCurrentPosition(position=>{
         let {latitude,longitude}= position.coords;
