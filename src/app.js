@@ -1,7 +1,7 @@
 let cityInput = document.getElementById("city_input"),
   searchBtn = document.getElementById("searchBtn"),
   locationBtn = document.getElementById("locationBtn"),
-  api_key = "your_api_key";
+  api_key = "83a7cc46cc6196175a5e90e8808dbdf4"; // add your api key here
   currentWeatherCard=document.querySelectorAll('.weather-left .card')[0],
   fiveDaysForecastCard=document.querySelector('.day-forecast'),
   aqiCard= document.querySelectorAll('.highlights .card')[0],
@@ -204,6 +204,7 @@ function getCityCoordinates() {
   if (!cityName) return;
   let GEOCODING_API_URL = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${api_key}`;
 
+
   fetch(GEOCODING_API_URL).then((res) => res.json()).then((data) => {
       let {name,lat,lon,country,state}=data[0];
       getWeatherDetails(name,lat,lon,country,state);
@@ -237,3 +238,4 @@ searchBtn.addEventListener("click",getCityCoordinates);
 locationBtn.addEventListener("click",getUserCoordinates);
 cityInput.addEventListener ('keyup', e =>e.key =='Enter' && getCityCoordinates());
 window.addEventListener('load', getUserCoordinates);
+

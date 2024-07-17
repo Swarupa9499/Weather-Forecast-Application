@@ -28,7 +28,7 @@
 }
 
 
-/*------------------------------- header css start------------------------- */
+/*------------------------------- header css------------------------- */
 .header {
     @apply sticky top-0 flex justify-between items-center mb-2 py-4;
     background-color: var(--bg-color1);
@@ -55,31 +55,81 @@
       background-color: var(--aqi-5);
     }
   }
-/*------------------------------- header css end------------------------- */
 
-/*------------------------------- card css -----------------------------*/
+/* .header {
+    position: sticky;
+    top: 0;
+    background-color: var(--bg-color1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 15px 0;
+
+    & h2 {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    & #city_input {
+        background-color: var(--bg-color2);
+        border: none;
+        padding: 12px;
+        font-size: 16px;
+        border-radius: 25px;
+        color: #ffffff;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    & #searchBtn {
+        border: none;
+        font-size: 16px;
+        padding: 12px;
+        border-radius: 25px;
+        background-color: #000;
+        cursor: pointer;
+    }
+
+    & #locationBtn {
+        border: none;
+        font-size: 16px;
+        padding: 12px;
+        border-radius: 25px;
+        background-color: #ef5350;
+        cursor: pointer;
+    }
+} */
+
 .card {
-    @apply p-4 rounded-lg mb-4;
     background-color: var(--bg-color2);
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 15px;
 
-    p {
-      @apply text-sm text-gray-400;
+    & p {
+        font-size: 14px;
+        color: #999;
     }
 
-    h2 {
-      @apply text-4xl font-medium;
+    & h2 {
+        font-size: 32px;
+        font-weight: 500;
     }
-  }
+}
 
 .weather-data {
-    @apply grid gap-3;
+    display: grid;
     grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
 
     & .weather-left {
         grid-column: span 1;
 
         & .current-weather {
-            @apply flex;
+            display: flex;
             justify-content: space-between;
             align-items: center;
 
@@ -93,13 +143,15 @@
         }
 
         & .card-footer p {
-            @apply text-sm mb-3;
+            font-size: 14px;
+            margin-bottom: 12px;
         }
 
         & .forecast-item {
-            @apply grid mb-4;
+            display: grid;
             grid-template-columns: repeat(3, 1fr);
             place-items: center;
+            margin-bottom: 15px;
 
             & .icon-wrapper {
                 display: flex;
@@ -112,11 +164,11 @@
         grid-column: span 3;
 
         & h2 {
-            @apply mb-3;
+            margin-bottom: 10px;
         }
 
         & .highlights {
-            @apply grid;
+            display: grid;
             grid-template-columns: repeat(4, 1fr);
             column-gap: 15px;
 
